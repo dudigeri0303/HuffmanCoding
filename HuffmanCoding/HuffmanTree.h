@@ -108,22 +108,4 @@ public:
 			MergeNodes();
 		}
 	}
-
-	void DeleteLeftAndRight(TreeNode* node) {
-		if (node == nullptr) {
-			return;
-		}
-
-		if (node->leftNode != nullptr) {
-			DeleteLeftAndRight(node->leftNode);
-		}
-	
-		if (node->rightNode != nullptr) {
-			DeleteLeftAndRight(node->rightNode);
-		}
-		
-		if (node != nullptr) {
-			delete node;
-		}
-	}
 };
